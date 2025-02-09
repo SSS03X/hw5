@@ -42,3 +42,26 @@
     color: white;
     font-weight:600;
   }
+
+
+  .like-dislike-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .like-button,
+  .dislike-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    width: 40px; /* Исправляем размер кнопок */
+    height: 40px;
+  }
+  
+  .like-icon,
+  .dislike-icon {
+    width: 24px; /* ✅ Указываем точный размер */
+    height: 24px;
+  }

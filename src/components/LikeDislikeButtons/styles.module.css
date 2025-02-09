@@ -1,39 +1,34 @@
-.like-dislike-container {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-  }
-  
-  .like-button,
-  .dislike-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  .like-button.active,
-  .dislike-button.active {
-    transform: scale(1.2);
-  }
-  
+/* styles.module.css */
+.likeDislikeContainer {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
 
-  .like-icon {
-    width: 24px;
-    height: 24px;
-    transform: rotate(180deg);
-  }
-  
-  .dislike-icon {
-    width: 24px;
-    height: 24px;
-  }
-  
+.likeButton, .dislikeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
 
-  .like-button.active .like-icon {
-    filter: invert(30%) sepia(80%) saturate(500%) hue-rotate(90deg);
-  }
-  
-  .dislike-button.active .dislike-icon {
-    filter: invert(20%) sepia(80%) saturate(500%) hue-rotate(0deg);
-  }
+.likeButton.active, .dislikeButton.active {
+  transform: scale(1.2);
+}
+
+.likeIcon, .dislikeIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.likeIcon {
+  transform: rotate(180deg);
+}
+
+.likeButton.active .likeIcon {
+  filter: invert(30%) sepia(80%) saturate(500%) hue-rotate(90deg);
+}
+
+.dislikeButton.active .dislikeIcon {
+  filter: invert(20%) sepia(80%) saturate(500%) hue-rotate(0deg);
+}

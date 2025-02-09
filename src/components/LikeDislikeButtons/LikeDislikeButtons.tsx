@@ -1,3 +1,5 @@
+import styles from "./styles.module.css";
+
 interface LikeDislikeButtonsProps {
     likeStatus: "like" | "dislike" | "none";
     onLike: () => void;
@@ -5,22 +7,22 @@ interface LikeDislikeButtonsProps {
     icon: string;
   }
   
+
   const LikeDislikeButtons = ({ likeStatus, onLike, onDislike, icon }: LikeDislikeButtonsProps) => {
     return (
-      <div className="like-dislike-container">
-
+      <div className={styles.likeDislikeContainer}>
         <button 
-          className={`like-button ${likeStatus === "like" ? "active" : ""}`} 
+          className={`${styles.likeButton} ${likeStatus === "like" ? styles.active : ""}`} 
           onClick={onLike}
         >
-          <img className="like-icon" src={icon} alt="Like" />
+          <img className={styles.likeIcon} src={icon} alt="Like" />
         </button>
   
         <button 
-          className={`dislike-button ${likeStatus === "dislike" ? "active" : ""}`} 
+          className={`${styles.dislikeButton} ${likeStatus === "dislike" ? styles.active : ""}`} 
           onClick={onDislike}
         >
-          <img className="dislike-icon" src={icon} alt="Dislike" />
+          <img className={styles.dislikeIcon} src={icon} alt="Dislike" />
         </button>
       </div>
     );
