@@ -27,9 +27,9 @@ const MovieList = ({
 }:MovieListProps) => {
   return (
     <div className={styles.wrapper}>
-      {movies.map((movie) => (
+      {movies.map((movie, index) => (
         <div key={movie.id}>
-          {`${movie.id}. ${movie.name}`}
+          {`${index + 1}. ${movie.name}`}
           <div className={styles.buttonsWrapper}>
             <input type="checkbox" onChange={() => toggleWatched(movie.id)} checked={movie.watched} />
             <button className={styles.editButton} onClick={() => handleEditMovie(movie.id)}>Edit</button>
